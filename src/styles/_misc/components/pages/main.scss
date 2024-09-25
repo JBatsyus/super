@@ -467,7 +467,6 @@
     background: #fafafa;
     padding: rem(64px) rem(44px);
     @include mobile_768 {
-      margin-bottom: rem(35px);
       padding: rem(27px) 8px rem(43px) rem(27px);
       gap: rem(30px);
     }
@@ -541,6 +540,15 @@ padding-left: 0;
       line-height: 1.5625;
     }
   }
+  .partners{
+    overflow: hidden;
+  }
+  .partners-h2{
+    margin-bottom: rem(70px);
+    @include mobile_768  {
+      margin-bottom: rem(35px);
+      }
+  }
   .partners-slider__wrap {
     .partners-slider {
       overflow: visible;
@@ -556,6 +564,10 @@ padding-left: 0;
         align-items: center;
         max-width: rem(417px);
         height: rem(86px);
+        @include mobile_768  {
+          max-width: rem(417px);
+          height: rem(40px);
+          }
       }
       .partners-slider__item img {
         max-width: 100%;

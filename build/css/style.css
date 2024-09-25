@@ -1017,6 +1017,14 @@ a.text {
   line-height: 1.5625;
 }
 
+.event-sections .partners {
+  overflow: hidden;
+}
+
+.event-sections .partners-h2 {
+  margin-bottom: 4.375rem;
+}
+
 .event-sections .partners-slider__wrap .partners-slider {
   overflow: visible;
 }
@@ -1641,7 +1649,6 @@ a.text {
   }
 
   .event-sections .shedule__wrap {
-    margin-bottom: 2.1875rem;
     padding: 1.6875rem 8px 2.6875rem 1.6875rem;
     gap: 1.875rem;
   }
@@ -1660,6 +1667,15 @@ a.text {
     /* line-height: 30px; */
     line-height: 1.66667;
     color: #232323;
+  }
+
+  .event-sections .partners-h2 {
+    margin-bottom: 2.1875rem;
+  }
+
+  .event-sections .partners-slider__wrap .partners-slider .partners-slider__item {
+    max-width: 26.0625rem;
+    height: 2.5rem;
   }
 }
 
