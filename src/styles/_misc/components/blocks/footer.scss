@@ -1,36 +1,36 @@
 /*--------------footer start-------------*/
-.footer-wrap{
-  .footer{
+.footer-wrap {
+  .footer {
     padding-top: rem(65px);
     padding-bottom: rem(75px);
-    ul, li {
+    ul,
+    li {
       padding: 0;
       margin: 0;
       list-style: none;
     }
-    .footer-top{
+    .footer-top {
       display: flex;
       justify-content: space-between;
       padding-bottom: 40px;
-      border-bottom: 1px solid #D2D2D2;
-      .footer-list{
+      border-bottom: 1px solid #d2d2d2;
+      .footer-list {
         display: flex;
-        gap:10px;
-        margin-left: 20PX;
-        .footer-list__item{
+        gap: 10px;
+        margin-left: 20px;
+        .footer-list__item {
           padding: 10px 20px;
           transition: 0.4s ease-in-out;
           &:hover {
-            background: #ececec;;
-            border-radius: 1231px;;
+            background: #ececec;
+            border-radius: 1231px;
           }
-          .footer-list__link{
+          .footer-list__link {
             font-family: $Inter600;
             font-weight: 600;
             font-size: 16px;
             color: #000;
             text-transform: uppercase;
-           
           }
         }
       }
@@ -44,30 +44,30 @@
           height: 40px;
           width: 40px;
           border-radius: 50%;
-          background-color: #1F1F1F;
+          background-color: #1f1f1f;
           transition: background-color 0.4s ease-in-out;
-      
+
           &:hover {
             background-color: #606060;
           }
-      
+
           svg {
             transition: fill 0.4s ease-in-out;
             fill: white;
           }
-      
+
           &:hover svg {
-            fill: #1F1F1F;
+            fill: #1f1f1f;
           }
         }
       }
-      }
-      .footer-bottom{
-        display: flex;
-        align-items: center;
+    }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
       justify-content: space-between;
       padding-top: 40px;
-      .footer-info{
+      .footer-info {
         font-family: $font-family;
         font-weight: 400;
         font-size: 14px;
@@ -76,16 +76,16 @@
       .partners-block {
         display: flex;
         gap: rem(50px);
-          a img{
-            height: 50px;
-          }
+        a img {
+          height: 50px;
+        }
       }
-      .contacts-block{
+      .contacts-block {
         display: flex;
         gap: 50px;
         align-items: center;
         justify-content: space-between;
-        .contact-item{
+        .contact-item {
           font-family: $Inter600;
           font-weight: 600;
           font-size: 16px;
@@ -93,7 +93,7 @@
           color: #040315;
         }
       }
-      }
+    }
   }
 }
 /*--------------footer end-------------*/
