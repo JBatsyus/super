@@ -92,6 +92,7 @@
     align-items: center;
     justify-content: center;
     margin-left: 20px;
+    position: relative; // Добавлено для псевдоэлемента
 
     .icon-humb {
       width: 30px;
@@ -106,45 +107,42 @@
         width: 100%;
         height: 2px;
         border-radius: 2px;
-        -webkit-transition: -webkit-transform 0.2s ease-in-out;
-        transition: -webkit-transform 0.2s ease-in-out;
-        -o-transition: transform 0.2s ease-in-out;
         transition: transform 0.2s ease-in-out;
-        transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 
         &:first-child {
           transform-origin: 25% 0%;
-          transition: -webkit-transform 0.4s ease-in-out;
-          -o-transition: transform 0.4s ease-in-out;
           transition: transform 0.4s ease-in-out;
-          transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
         }
 
         &:last-child {
           transform-origin: 0% 0%;
-          transition: -webkit-transform 0.4s ease-in-out;
-          -o-transition: transform 0.4s ease-in-out;
           transition: transform 0.4s ease-in-out;
-          transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
         }
       }
     }
 
-    &.active .icon-humb__line {
-      transform: scale(0);
-    }
+    &.active {
+      .icon-humb__line {
+        transform: scale(0); // Скрытие линий
+      }
 
-    &.active .icon-humb__line:first-child {
-      transform: rotate(45deg);
-      width: 30px;
-    }
-
-    &.active .icon-humb__line:last-child {
-      transform: rotate(-45deg);
-      width: 30px;
+      // Псевдоэлемент для SVG
+      &::before {
+        content: ''; // Убедитесь, что контент пустой
+        display: block;
+        width: 35px; // Ширина SVG
+        height: 36px;
+        position: absolute;
+        top: -2px;
+        left: -7px;
+        background-image: url('data:image/svg+xml;utf8,<svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="17.5" cy="18.4441" rx="17.5" ry="17.469" fill="white" /><path d="M29.0127 19.8307C29.5246 19.8307 29.9396 19.4157 29.9396 18.9038C29.9396 18.3919 29.5246 17.9769 29.0127 17.9769L29.0127 19.8307ZM5.7915 18.2484C5.42953 18.6104 5.42953 19.1972 5.7915 19.5592L11.6902 25.4579C12.0521 25.8199 12.639 25.8199 13.001 25.4579C13.363 25.0959 13.363 24.509 13.001 24.1471L7.75772 18.9038L13.001 13.6605C13.363 13.2986 13.363 12.7117 13.001 12.3497C12.639 11.9878 12.0521 11.9878 11.6902 12.3497L5.7915 18.2484ZM29.0127 17.9769L6.44691 17.9769L6.44691 19.8307L29.0127 19.8307L29.0127 17.9769Z" fill="black" /></svg>');
+        background-size: contain; // Обеспечьте, чтобы SVG корректно отображался
+        background-repeat: no-repeat;
+      }
     }
   }
 }
+
 .menu-mob{
   display: none;
 }
