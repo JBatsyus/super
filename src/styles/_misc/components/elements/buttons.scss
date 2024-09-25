@@ -1,0 +1,39 @@
+// .buttons-wrap{
+//   display: flex;
+// }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.button_big{
+  font-size: rem(24px);
+  padding: rem(20px) rem(50px);
+  border-radius: rem(10px);
+  font-family: $Inter900;
+  font-weight: 900;
+  line-height: 1.03333;
+  text-transform: uppercase;
+  @include mobile_768{
+    padding: rem(17px) rem(30px);
+    font-size: rem(14px);
+ }
+  // @include tablet_991{
+  //   height: rem(40px);
+  //   font-size: rem(16px);
+  // }
+}
+
+.button_orange {
+  color: $color-white;
+  background-color: $color-orange;
+  transition: 0.4s ease-in-out;
+
+&:hover {
+    background: #CF4200;
+    color: $color-white;
+  }
+}

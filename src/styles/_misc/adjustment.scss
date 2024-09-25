@@ -1,0 +1,171 @@
+@import 'mixins';
+
+@import 'global-fonts';
+
+$color-gray:rgba(0, 0, 0, 0.4);
+$color-white: #FFFFFF;
+$color-orange: #FB641E;
+
+$R-500: #ED2201;
+$Wr-500: #F4D74E;
+$Wr-400: #E0C648;
+$P-500: #EC6C7F;
+$P-400: #D96375;
+$V-500: #B889B6;
+$V-400: #A97EA7;
+$Bl-500: #6ECAF1;
+$Bl-400: #65BADE;
+$G-500: #53B04B;
+$G-400: #4CA245;
+$Or-500: #F47831;
+$Or-400: #E06E2D;
+$B-500: #010101;
+$B-400: #909090;
+$B-300: rgba(1, 1, 1, 0.4);
+$W-500: #FEFEFE;
+$Gr-400: rgba(1, 1, 1, 0.08);
+$Gr-300: rgba(1, 1, 1, 0.04);
+
+
+$Humanst521: 'Humanst521 BT';
+$font-family: 'Inter', sans-serif;
+$Inter500: 'Inter-Medium', sans-serif;
+$Inter900: 'Inter-Black', sans-serif;
+$Inter600:'Inter-SemiBold', sans-serif;
+$Inter700:'Inter-Bold', sans-serif;
+@function rem($px) {
+  @return calc($px / 16px) + 0rem;
+}
+
+@function scale2500($rem) {
+  @return calc($rem * 0.9);
+}
+
+
+@function size-w($size, $vw) {
+  @return (calc(100 / (calc($vw / $size)))) * 1vw;
+}
+
+body {
+  font-family: $Humanst521, Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $B-500;
+  font-size: rem(16px);
+  text-rendering: auto;
+  line-height: normal;
+  line-height: 24px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  outline: none !important;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+
+:root {
+  --app-height: 100%;
+}
+
+.f-bold{
+  font-weight: bold;
+}
+
+
+
+
+header {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+
+.wrapper {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 1 auto;
+}
+
+footer {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// ul, li {
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+// }
+
+
+* {
+  box-sizing: border-box;
+}
+
+button, a, input {
+  outline: none;
+  
+  &:focus, &:visited {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+label {
+  margin: 0;
+}
+
+.price {
+  white-space: nowrap;
+}
+
+html{
+  height: 100%;
+  @include desktop4K{
+    font-size: 22px;
+  }
+  @include desktop2K{
+    font-size: 20px;
+  }
+  @include desktop1920{
+    font-size: 16px;
+  }
+  @include desktop1400{
+    font-size: 15px;
+  }
+  @include desktop1300{
+    font-size: 14px;
+  }
+  @include desktop1200{
+    font-size: 13px;
+  }
+  @include desktop1100{
+    font-size: 12px;
+  }
+  @include desktop1000{
+    font-size: 11px;
+  }
+  @include tablet_991{
+    font-size: 16px;
+
+  }
+}
+

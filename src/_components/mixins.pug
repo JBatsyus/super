@@ -1,0 +1,5 @@
+
+mixin button(data)
+  - mod = data.mod || ''
+  a(href="javascript:void(0);" class=`button ${mod}`) !{data.text}
+  

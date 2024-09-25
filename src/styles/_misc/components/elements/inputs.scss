@@ -1,0 +1,254 @@
+// .form-inputs__wrap{
+//   margin-bottom: rem(24px);
+//   @include tablet_991{
+//     margin-bottom: rem(18px);
+//   }
+// }
+// .form-input-wrap {
+//   position: relative;
+// }
+
+// .form__input,
+// .form__textarea{
+//   width: 100%;
+//   outline: none;
+//   font-size: rem(20px);
+//   border-radius: rem(8px);
+//   padding: rem(12px) rem(17px);
+//   border: 1px solid $Gr-300;
+//   background: $Gr-300;
+//   @include placeholder($B-400, rem(20px));
+//   @include tablet_991{
+//     @include placeholder($B-400, rem(16px));
+  
+//   }
+//   &.input-disabled{
+//     @include placeholder($Gr-400, rem(20px));
+//     pointer-events: none;
+//     @include tablet_991 {
+//       @include placeholder($Gr-400, rem(16px));
+//     }
+//   }
+  
+//   &:focus{
+//     box-shadow: 0px 0px 0px 2px rgba(1, 1, 1, 0.08);
+  
+//   }
+// }
+// .form__input{
+//   height: rem(56px);
+// }
+// .form__textarea{
+//   height: rem(80px);
+// }
+
+// .form__label {
+//   margin-bottom: rem(5px);
+// }
+// .form-inputs__wrap_part{
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   column-gap: rem(24px);
+//   @include tablet_991{
+//     grid-template-columns: 1fr;
+//     row-gap: rem(24px);
+//   }
+// }
+
+// .form__label__top{
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .no-requared{
+//   color: $B-300;
+//   @include tablet_991{
+//     font-size: rem(14px);
+//   }
+// }
+
+
+// .error-message {
+//   color: $R-400;
+//   position: absolute;
+//   bottom: rem(-20px);
+//   left: 0;
+//   font-size: rem(12px);
+//   display: none;
+// }
+
+// .input-error{
+//   .form__input{
+//     border-color: $R-400;
+//   }
+//   .error-message{
+//     display: block;
+//   }
+// }
+
+// /* dropzone */
+// .dropzone-wrap {
+//   padding: rem(9px) rem(17px) rem(9px);
+//   border: 1px solid $Gr-400;
+//   border-radius: rem(9px);
+//   width: rem(250px);
+//   margin-bottom: rem(24px);
+//   &:hover{
+//     cursor: pointer;
+//   }
+//   @include tablet_991{
+//     width: 100%;
+//   }
+// }
+
+// .dropzone {
+//   border: none;
+//   padding: 0;
+//   min-height: rem(0px);
+
+// }
+
+
+// .dropzone .dz-preview {
+//   display: flex;
+//   min-height: rem(20px);
+//   margin: rem(5px) 0 0;
+
+// }
+
+// .dropzone .dz-preview .dz-success-mark svg,
+// .dropzone .dz-preview .dz-error-mark svg,
+// .dz-error-message {
+//   display: none !important;
+// }
+
+// .dropzone .dz-preview .dz-details {
+//   pointer-events: none;
+//   display: flex;
+//   margin-top: 0;
+//   color: #BABABA;
+//   opacity: 1;
+//   padding: 0 0 0 rem(17px);
+//   font-size: rem(16px);
+// }
+
+// .dropzone .dz-preview .dz-details .dz-filename {
+//   overflow: hidden;
+// }
+
+// .dropzone .dz-preview .dz-image {
+//   height: auto;
+// }
+
+// .dropzone .dz-preview .dz-details .dz-filename span,
+// .dropzone .dz-preview .dz-details .dz-size span {
+//   background: none;
+//   font-size: rem(18px);
+//   @include tablet_991{
+//     font-size: rem(14px);
+//     line-height: rem(14px);
+//   }
+
+// }
+
+// .dropzone .dz-preview .dz-details .dz-size span {
+//   color: #90949A;
+
+// }
+
+// .dropzone .dz-preview .dz-details .dz-filename {
+//   margin-bottom: rem(9px);
+// }
+
+// .dz-size {
+//   span strong {
+//     color: #90949A;
+//   }
+// }
+
+
+// .dropzone .dz-preview .dz-details .dz-size {
+//   font-weight: 300;
+//   display: none;
+// }
+
+// .dropzone .dz-message {
+//   margin: 0;
+//   text-align: left;
+//   @include tablet_991{
+//     font-size: rem(13px);
+//   }
+// }
+
+// .dz-message {
+//   border: none;
+//   align-items: center;
+//   display: flex !important;
+//   order: 1;
+//   height: auto;
+//   color: $B-500;
+//   span{
+//     font-size: rem(14px);
+//     color: $B-300;
+//     margin-left: rem(14px);
+//     margin-top: 0;
+//   }
+
+//   &:before {
+//     content: '';
+//     @include background-contain('add-icon.svg');
+//     width: rem(24px);
+//     height: rem(24px);
+//     margin-right: 5px;
+
+//   }
+
+
+// }
+
+// .dropzone .dz-preview .dz-image {
+//   display: none;
+// }
+
+// .dropzone .dz-preview .dz-remove {
+//   text-indent: rem(-99999px);
+//   @include background-contain('icon-close.svg');
+//   @include width-flex(rem(16px));
+//   height: rem(16px);
+//   z-index: 10;
+//   margin-top: rem(2px);
+// }
+
+
+
+// .dropzone .dz-preview .dz-progress {
+//   height: rem(5px);
+// }
+
+// /**/
+
+// .icon-clear{
+//   @include background-contain('icon-close.svg');
+//   background-color: transparent;
+//   border: none;
+//   width: rem(20px);
+//   height: rem(20px);
+//   position: absolute;
+//   right: rem(15px);
+//   top: 50%;
+//   margin-top: rem(-10px);
+//   z-index: 10;
+// }
+
+// .city-block__select__dropdown__search:not(:valid) ~ .icon-clear,
+// .search-block__input:not(:valid) ~ .icon-clear {
+//   display: none;
+// }
+
+// input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+// input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+// input[type="search"]::-webkit-search-decoration,
+// input[type="search"]::-webkit-search-cancel-button,
+// input[type="search"]::-webkit-search-results-button,
+// input[type="search"]::-webkit-search-results-decoration { display: none; }
