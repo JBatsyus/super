@@ -561,6 +561,9 @@ a.text {
   font-weight: 400;
   font-size: 14px;
   color: #999;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .footer-wrap .footer .footer-bottom .partners-block {
@@ -568,10 +571,13 @@ a.text {
   display: -ms-flexbox;
   display: flex;
   gap: 3.125rem;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .footer-wrap .footer .footer-bottom .partners-block a img {
-  height: 50px;
+  height: 3.125rem;
 }
 
 .footer-wrap .footer .footer-bottom .contacts-block {
@@ -585,6 +591,9 @@ a.text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
 .footer-wrap .footer .footer-bottom .contacts-block .contact-item {
@@ -1287,6 +1296,22 @@ a.text {
     font-size: 13px;
   }
 
+  .footer-wrap .footer .footer-top .footer-list .footer-list__item .footer-list__link {
+    font-size: 13px;
+  }
+
+  .footer-wrap .footer .footer-bottom .partners-block a img {
+    height: 2.5rem;
+  }
+
+  .footer-wrap .footer .footer-bottom .partners-block {
+    gap: 1.25rem;
+  }
+
+  .footer-wrap .footer .footer-bottom .contacts-block .contact-item {
+    font-size: 13px;
+  }
+
   .banner-main__wrap {
     min-height: 700px;
   }
@@ -1440,6 +1465,64 @@ a.text {
     font-size: 1rem;
   }
 
+  .footer-wrap .footer .footer-top {
+    padding-bottom: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .footer-wrap .footer .footer-top .footer-list {
+    margin-left: 0px;
+  }
+
+  .footer-wrap .footer .footer-top .footer-list .footer-list__item .footer-list__item {
+    padding: 10px;
+  }
+
+  .footer-wrap .footer .footer-top .footer-list .footer-list__item:first-child {
+    padding-left: 0;
+  }
+
+  .footer-wrap .footer .footer-top .footer-social {
+    gap: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d2d2d2;
+  }
+
+  .footer-wrap .footer .footer-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 25px;
+  }
+
+  .footer-wrap .footer .footer-bottom .footer-info {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .footer-wrap .footer .footer-bottom .partners-block {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-wrap .footer .footer-bottom .partners-block a img {
+    height: 2.875rem;
+  }
+
+  .footer-wrap .footer .footer-bottom .contacts-block {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 45px;
+  }
+
   .banner-main__wrap .event-banner__inner .container {
     top: calc(var(--js-header-height) + 27px);
   }
@@ -1519,6 +1602,47 @@ a.text {
 
   .header .header-social {
     display: none;
+  }
+
+  .footer-wrap .footer {
+    padding-top: 0;
+  }
+
+  .footer-wrap .footer .footer-top .footer-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 25px;
+    gap: 45px;
+  }
+
+  .footer-wrap .footer .footer-top .footer-list .footer-list__item {
+    padding: 0px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .footer-wrap .footer .footer-bottom .partners-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-wrap .footer .footer-bottom .contacts-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-wrap .footer .footer-bottom .contacts-block .contact-item {
+    line-height: 1;
+    font-size: 16px;
   }
 
   .banner-main__wrap {
