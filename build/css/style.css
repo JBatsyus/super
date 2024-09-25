@@ -874,10 +874,6 @@ a.text {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  font-family: "Inter-Medium", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.25;
   color: #000;
 }
 
@@ -886,32 +882,34 @@ a.text {
 }
 
 .event-sections .event-location__wrap .event-location__info p {
-  margin-bottom: 30px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 28px;
+  line-height: 1.25;
+}
+
+.event-sections .event-location__wrap .event-location__info p:nth-of-type(1) {
+  font-family: "Inter-Black", sans-serif;
+  font-weight: 900;
 }
 
 .event-sections .event-location__wrap .event-location__info p:nth-of-type(3) {
   margin-bottom: 70px;
+  line-height: 1.25;
 }
 
-.event-sections .event-location__wrap .event-location__info .shape {
+.event-sections .event-location__wrap .event-location__info .img-block {
+  max-width: 36.5625rem;
+}
+
+.event-sections .event-location__wrap .event-location__info .img-block img {
   width: 100%;
-  max-width: 584px;
-  height: 70px;
-  background-color: #fb641e;
-  clip-path: path("M34.5464 2.17032C36.1906 0.775549 38.3536 0.000116257 40.6 0.000116257L542.729 0C544.943 0 547.078 0.753549 548.714 2.11296L581.101 29.0177C584.966 32.2284 584.966 37.7715 581.101 40.9822L548.714 67.8869C547.078 69.2463 544.943 69.9999 542.729 69.9999L40.6 70C38.3536 70 36.1906 69.2246 34.5464 67.8298L2.83052 40.9251C-0.943512 37.7235 -0.943505 32.2766 2.83053 29.075L34.5464 2.17032Z");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Inter-Black", sans-serif;
-  color: #FFFFFF;
-  font-size: 2rem;
-  text-align: center;
+  height: auto;
+}
+
+.event-sections .event-location__wrap .event-location__info .img-block .mob {
+  display: none;
 }
 
 .event-sections .event-location__wrap .event-location__image {
@@ -1295,6 +1293,21 @@ a.text {
   .date-block__wrap {
     margin-bottom: 1.25rem;
   }
+
+  .event-sections .event-location__wrap .event-location__info {
+    font-size: 22px;
+  }
+
+  .event-sections .event-location__wrap .event-location__info .h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 768px) {
+  .event-sections .event-location__wrap .event-location__info .h3 {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1453,6 +1466,10 @@ a.text {
     grid-template-columns: 1fr;
     padding: 24px 16px;
   }
+
+  .event-sections .event-location__wrap {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1540,6 +1557,61 @@ a.text {
     padding-top: 1.5625rem;
     padding-bottom: 6.25rem;
   }
+
+  .event-sections .event-location__wrap {
+    gap: 0px;
+  }
+
+  .event-sections .event-location__wrap .event-location__info {
+    gap: 0px;
+  }
+
+  .event-sections .event-location__wrap .event-location__info .h2 {
+    margin-bottom: 35px;
+  }
+
+  .event-sections .event-location__wrap .event-location__info p {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
+
+  .event-sections .event-location__wrap .event-location__info p:nth-of-type(3) {
+    margin-bottom: 35px;
+  }
+
+  .event-sections .event-location__wrap .event-location__info .img-block {
+    max-width: 272px;
+    height: 51px;
+    margin-bottom: 35px;
+  }
+
+  .event-sections .event-location__wrap .event-location__info .img-block .desk {
+    display: none;
+  }
+
+  .event-sections .event-location__wrap .event-location__info .img-block .mob {
+    display: block;
+  }
+
+  .event-sections .event-location__wrap .event-location__image {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .event-sections .event-location__wrap .event-location__image img:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .event-sections .event-location__wrap .event-location__image img:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .event-sections .event-location__wrap .event-location__image img:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1557,6 +1629,10 @@ a.text {
 @media (max-width: 340px) {
   .registration-form__wrap .registration-form input {
     width: 100%;
+  }
+
+  .event-sections .event-location__wrap .event-location__info .event-location__title {
+    max-width: 260px;
   }
 }
 
