@@ -194,7 +194,7 @@
 }
 // форма регистрации start
 .registration-form__wrap {
-  padding: 24px;
+  padding: 50px 44px 44px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
@@ -331,7 +331,7 @@
     .event-location__info {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      // gap: 30px;
       color: #000;
       @include desktop1200 {
         font-size: 22px;
@@ -352,6 +352,7 @@
         }
       }
       .h2 {
+        margin-bottom: rem(45px);
         text-transform: uppercase;
         @include mobile_768 {
           margin-bottom: 35px;
@@ -362,8 +363,9 @@
         font-family: $Inter500;
         font-weight: 500;
         font-size: rem(24px);
-        margin-bottom: 28px;
-        line-height: 1.25;
+        margin-bottom: 30px;
+        // line-height: 1.25;
+        margin-top: 0;
         @include mobile_768 {
           font-size: rem(12px);
           margin-top: 0;
@@ -379,8 +381,11 @@
         @include mobile_768 {
           margin-bottom: 35px;
         }
+        
       }
-
+      .h3{
+        margin-bottom: rem(70px);
+      }
       .img-block {
         max-width: rem(585px);
         img {
