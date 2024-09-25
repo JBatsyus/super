@@ -1,13 +1,6 @@
-.container {
-  max-width: rem(1470px);
-  margin: 0 auto;
-  padding-right: 24px;
-  padding-left: 24px;
- }
+
 @media (max-width: 991px) {
-  // .container {
-  //   max-width: rem(1384px)
-  // }
+
   .row {
     margin-right: rem(-12px);
     margin-left: rem(-12px);
@@ -24,17 +17,16 @@
   }
 }
 
-// @media (min-width: 576px) {
-//   .container {
-//     max-width: 100%;
-//   }
-// }
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
 
 
 .h1 {
   font-size: rem(80px);
-  // font-family: $Humanst521;
-  line-height: rem(80px);
+line-height: rem(80px);
   @include tablet_991 {
     font-size: rem(40px);
     line-height: rem(40px);
@@ -76,6 +68,12 @@ text-transform: uppercase;
   }
 }
 
+.container {
+  max-width: rem(1470px);
+  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
+ }
 
 p {
   line-height: rem(24px);

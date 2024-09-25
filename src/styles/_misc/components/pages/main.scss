@@ -2,8 +2,14 @@
   min-height: 1000px;
   position: relative;
   overflow: hidden;
-  @include tablet_991 {
-    aspect-ratio: 1/1;
+  @include desktop1400 {
+    min-height: 850px;
+  }
+  @include desktop1200 {
+    min-height: 700px;
+  }
+  @include mobile_768 {
+    min-height: 630px;
   }
   .banner {
     position: absolute;
