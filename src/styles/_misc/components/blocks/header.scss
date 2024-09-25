@@ -23,6 +23,11 @@
     .menu-list {
       display: flex;
       gap: 10px;
+      @include desktop1100{
+        display: none;
+      }
+    
+      
       .menu-item {
         padding: 10px 20px;
         transition: 0.4s ease-in-out;
@@ -32,11 +37,14 @@
           border-radius: 1231px;
         }
         .menu-link {
-          font-family: $font-family;
+          font-family: $Inter600;
           font-weight: 600;
           font-size: 16px;
           color: $color-white;
           text-transform: uppercase;
+          @include desktop1200{
+            font-size: 13px;
+          }
         }
       }
     }
@@ -44,6 +52,9 @@
   .header-social {
     display: flex;
     gap: 20px;
+    @include mobile_768{
+      display: none;
+    }
     a {
       svg {
         transition: fill 0.4s ease-in-out;

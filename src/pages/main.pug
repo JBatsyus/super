@@ -2,235 +2,235 @@ extends ../templates/template-main.pug
 block variables
   - const pageClass = 'page-main'
 
-block content
-  main.wrapper
-    .banner-main__wrap
-      .banner(style="background-image:url('./img/banner.png')")
-      .event-banner__inner
-        .container
-          .date-block__wrap
-            .left
-              .left-top 
-                <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
-                </svg>
-                span 13 октября
-              .left-bottom
-                <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
-                </svg>
-                span 18:00 начало
-            .middle
-                <svg width="2" height="33" viewBox="0 0 2 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1V31.75" stroke="white" stroke-width="0.75" stroke-linecap="round" />
-                </svg>
-            .right
-              .right-top 
-                span “Воробьёв Холл” 
-              .right-bottom
-                span Косыгина 28, стр.1
-          .headline-wrap
-            h1.h1
-              span МОСКОВСКИЙ МАРАФОН
-              span DUSTY DUMBBELLS
-              span СОЮЗ ЛЮБИТЕЛЕЙ СПОРТА
-          .desc-wrap
-            p 
-              span.f-bold Вечерняя вечеринка с видом на Лужники
-              | , ивент с лучшим панорамным видом для всех желающих участников Московского Марафона 13 октября в 18:00, викторины, лотереи с ценными призами, выступление главных лиц столичной музыкальной электронной сцены!
-            p Приглашаем участников Московского Марафона на afterparty by dd
-          .post-wrap 
-            .buttons-wrap
-              +button({
-                mod: 'button_big button_orange modal-toggle',
-                text: 'Бесплатная регистрация'
-              })
-            .partners-wrap 
-              img(src='./img/dd.svg' alt='')
-              img(src='./img/souz.svg' alt='')
-              img(src='./img/Moscow_Marathon.svg' alt='')
-    .event-sections
-      section.section#registration
-        .container
-          .registration-form__wrap
-            .registration-form__info
-              h2.h2  регистрация
-              .registration-form__title
-                span.f-bold Мы популяризируем бег и объединяем клубы. <br>
-                | Мы развиваем спортивный нетворкинг.<br>
-                | Лучшие соревнуются с лучшими.<br>
-                span.f-bold Но на Afterparty by DD вы отдохнёте.
-              .registration-form__list
-                ul
-                  li Вход свободный
-                  li Видовой проезд на канатной дороге до Afterparty
-                  li Розыгрыши и интерактивы от партнеров вечеринки
-                  li Зоны BAR&FOOD
-            form.registration-form
-              input(type="text" placeholder="ФИО")
-              input(type="number" placeholder="Возраст")
-              input(type="tel" placeholder="Телефон")
-              input(type="email" placeholder="Почта")
-              input(type="text" placeholder="Беговой клуб")
-              button.submit-btn(type="submit") Отправить
-      section.section#competitions
-        .container
-          .relay-block__wrap
-            .relay-image(style="background-image:url('./img/relay.png')")
-              .relay-block__inner-wrap
-                .relay-block__left 
-                    .relay-block__title 
-                      p Продолжи 
-                      p свою эстафету
-                    .relay-shape 
-                      span На afterparty by dd
-      section.section#venue
-              .container
-                .event-location__wrap
-                  .event-location__info
-                    h2.h2  Место проведения
-                    .event-location__title
-                      p.f-bold Ваш маршрут продолжен в “Воробьёвы холл”
-                      p Приглашаем участников Московского Марафона на AFTERPARTY BY DD. Вечеринка для самых стойких в кругу единомышленников. Вас ждёт увлекательный вечер!
-                      p Финишная прямая продлена до утра для самых стойких! 
-                      h3.h3 Бесплатная канатная дорога для зарегестрированных
-                    .shape 
-                      span ВХОД БЕСПЛАТНЫЙ
-                  .event-location__image
-                    img(src="./img/1.png" alt="")
-                    img(src="./img/2.png" alt="")
-                    img(src="./img/3.png" alt="")
-      section.section#performance
-        .container
-          .dj-block__wrap
-            .dj-image(style="background-image:url('./img/dj.png')")
-              .dj-block__inner-wrap
-                .dj-block__left
-                  .dj-block__top
-                    .dj-block__title 
-                      .date-block__wrap
-                          .left
-                            .left-top 
-                              <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
-                              </svg>
-                              span 13 октября
-                            .left-bottom
-                              <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
-                              </svg>
-                              span 18:00 начало
-                          .middle
-                              <svg width="2" height="33" viewBox="0 0 2 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1V31.75" stroke="white" stroke-width="0.75" stroke-linecap="round" />
-                              </svg>
-                          .right
-                            .right-top 
-                              span “Воробьёв Холл” 
-                            .right-bottom
-                              span Косыгина 28, стр.1
-                    .dj-block__headline ВЫСТУПЛЕНИЕ ТОР DJ
-                  .dj-block__bottom
-                    .dj-block__desc 
-                      p Продли эмоции с нами! 
-                      p Выступление TOP DJ, главных лиц столичной музыкальной электронной сцены!
-                      p Сотни киловатт звука, Зарядись надолго!
-      section.section#schedule
-        .container
-          h2.h2  Расписание
-          .chedule__wrap
-            .schedule__item
-              .schedule__time
-                span 17:30-18:30
-                <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 5H593" stroke="#232323" />
-                  <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
-                  <path d="M104 5L98 9.33013L98 0.669872L104 5Z" fill="#232323" />
-                  <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
-                </svg>
-              .schedule__name Мужские забеги на 3000 м
-            .schedule__item
-              .schedule__time
-                span 18:30-19:05
-                <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 5H593" stroke="#232323" />
-                  <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
-                  <path d="M224 5L218 9.33013L218 0.669872L224 5Z" fill="#232323" />
-                  <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
-                </svg>
-              .schedule__name Женские забеги на 3000 м
-            .schedule__item
-              .schedule__time
-                span 19:10-19:29
-                <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 5H593" stroke="#232323" />
-                  <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
-                  <path d="M269 5L263 9.33013L263 0.669872L269 5Z" fill="#232323" />
-                  <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
-                </svg>
-              .schedule__name Мастер-класс по эстафетам <br> брифинг команд
-            .schedule__item
-              .schedule__time
-                span 19:30-21:10
-                <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 5H593" stroke="#232323" />
-                  <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
-                  <path d="M344 5L338 9.33013L338 0.669872L344 5Z" fill="#232323" />
-                  <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
-                </svg>
-              .schedule__name Шведская эстафета <br>1600/1200/800/400
-            .schedule__item
-              .schedule__time
-                span 21:20-22:10
-                <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 5H593" stroke="#232323" />
-                  <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
-                  <path d="M464 5L458 9.33013L458 0.669872L464 5Z" fill="#232323" />
-                  <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
-                </svg>
-              .schedule__name Эстафета 4х100
-            .schedule__item
-              .schedule__time
-                span 22:30-23:00
-                <svg width="583" height="10" viewBox="0 0 583 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 5L573 5.00005" stroke="#232323" />
-                  <path d="M583 5L577 9.33013L577 0.669872L583 5Z" fill="#232323" />
-                  <path d="M577 5L571 9.33013L571 0.669872L577 5Z" fill="#232323" />
-                  <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
-                </svg>
-              .schedule__name Награждение, DJ
-      section.section
-        .container
-          .registration-form__wrap
-            .registration-form__info
-              h2.h2  регистрация
-              .registration-form__title
-                p.f-bold.mb-30 Регистрация бесплатная!
-                p Вечерняя вечеринка с видом на Лужники, ивент с лучшим панорамным видом для всех желающих участников ММ, викторины, лотереи с ценными призами, выступление живых легенд клубной музыкальной индустрии!
-            form.registration-form
-              input(type="text" placeholder="ФИО")
-              input(type="number" placeholder="Возраст")
-              input(type="tel" placeholder="Телефон")
-              input(type="email" placeholder="Почта")
-              input(type="text" placeholder="Беговой клуб")
-              button.submit-btn(type="submit") Отправить
-      section.section
-        .container
-          h2.h2  Партнеры
-        .partners-slider__wrap
-          .swiper.partners-slider 
-            .swiper-wrapper
-              .swiper-slide(style="margin-right: 100px;")
-                a(href="javascript:void(0);").partners-slider__item
-                  img(src="./img/dd_logo.png", alt="")
-              .swiper-slide(style="margin-right: 100px;")
-                a(href="javascript:void(0);").partners-slider__item 
-                  img(src="./img/mm_logo.png", alt="")
-              .swiper-slide(style="margin-right: 100px;")
-                a(href="javascript:void(0);").partners-slider__item 
-                  img(src="./img/souz_logo.png", alt="")
-              .swiper-slide(style="margin-right: 100px;")
-                a(href="javascript:void(0);").partners-slider__item
-                  img(src="./img/vbi_logo.png", alt="")
+//- block content
+//-   main.wrapper
+//-     .banner-main__wrap
+//-       .banner(style="background-image:url('./img/banner.png')")
+//-       .event-banner__inner
+//-         .container
+//-           .date-block__wrap
+//-             .left
+//-               .left-top 
+//-                 <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
+//-                 </svg>
+//-                 span 13 октября
+//-               .left-bottom
+//-                 <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
+//-                 </svg>
+//-                 span 18:00 начало
+//-             .middle
+//-                 <svg width="2" height="33" viewBox="0 0 2 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M1 1V31.75" stroke="white" stroke-width="0.75" stroke-linecap="round" />
+//-                 </svg>
+//-             .right
+//-               .right-top 
+//-                 span “Воробьёв Холл” 
+//-               .right-bottom
+//-                 span Косыгина 28, стр.1
+//-           .headline-wrap
+//-             h1.h1
+//-               span МОСКОВСКИЙ МАРАФОН
+//-               span DUSTY DUMBBELLS
+//-               span СОЮЗ ЛЮБИТЕЛЕЙ СПОРТА
+//-           .desc-wrap
+//-             p 
+//-               span.f-bold Вечерняя вечеринка с видом на Лужники
+//-               | , ивент с лучшим панорамным видом для всех желающих участников Московского Марафона 13 октября в 18:00, викторины, лотереи с ценными призами, выступление главных лиц столичной музыкальной электронной сцены!
+//-             p Приглашаем участников Московского Марафона на afterparty by dd
+//-           .post-wrap 
+//-             .buttons-wrap
+//-               +button({
+//-                 mod: 'button_big button_orange modal-toggle',
+//-                 text: 'Бесплатная регистрация'
+//-               })
+//-             .partners-wrap 
+//-               img(src='./img/dd.svg' alt='')
+//-               img(src='./img/souz.svg' alt='')
+//-               img(src='./img/Moscow_Marathon.svg' alt='')
+//-     .event-sections
+//-       section.section#registration
+//-         .container
+//-           .registration-form__wrap
+//-             .registration-form__info
+//-               h2.h2  регистрация
+//-               .registration-form__title
+//-                 span.f-bold Мы популяризируем бег и объединяем клубы. <br>
+//-                 | Мы развиваем спортивный нетворкинг.<br>
+//-                 | Лучшие соревнуются с лучшими.<br>
+//-                 span.f-bold Но на Afterparty by DD вы отдохнёте.
+//-               .registration-form__list
+//-                 ul
+//-                   li Вход свободный
+//-                   li Видовой проезд на канатной дороге до Afterparty
+//-                   li Розыгрыши и интерактивы от партнеров вечеринки
+//-                   li Зоны BAR&FOOD
+//-             form.registration-form
+//-               input(type="text" placeholder="ФИО")
+//-               input(type="number" placeholder="Возраст")
+//-               input(type="tel" placeholder="Телефон")
+//-               input(type="email" placeholder="Почта")
+//-               input(type="text" placeholder="Беговой клуб")
+//-               button.submit-btn(type="submit") Отправить
+//-       section.section#competitions
+//-         .container
+//-           .relay-block__wrap
+//-             .relay-image(style="background-image:url('./img/relay.png')")
+//-               .relay-block__inner-wrap
+//-                 .relay-block__left 
+//-                     .relay-block__title 
+//-                       p Продолжи 
+//-                       p свою эстафету
+//-                     .relay-shape 
+//-                       span На afterparty by dd
+//-       section.section#venue
+//-               .container
+//-                 .event-location__wrap
+//-                   .event-location__info
+//-                     h2.h2  Место проведения
+//-                     .event-location__title
+//-                       p.f-bold Ваш маршрут продолжен в “Воробьёвы холл”
+//-                       p Приглашаем участников Московского Марафона на AFTERPARTY BY DD. Вечеринка для самых стойких в кругу единомышленников. Вас ждёт увлекательный вечер!
+//-                       p Финишная прямая продлена до утра для самых стойких! 
+//-                       h3.h3 Бесплатная канатная дорога для зарегестрированных
+//-                     .shape 
+//-                       span ВХОД БЕСПЛАТНЫЙ
+//-                   .event-location__image
+//-                     img(src="./img/1.png" alt="")
+//-                     img(src="./img/2.png" alt="")
+//-                     img(src="./img/3.png" alt="")
+//-       section.section#performance
+//-         .container
+//-           .dj-block__wrap
+//-             .dj-image(style="background-image:url('./img/dj.png')")
+//-               .dj-block__inner-wrap
+//-                 .dj-block__left
+//-                   .dj-block__top
+//-                     .dj-block__title 
+//-                       .date-block__wrap
+//-                           .left
+//-                             .left-top 
+//-                               <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                 <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
+//-                               </svg>
+//-                               span 13 октября
+//-                             .left-bottom
+//-                               <svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                 <path d="M1 3.54836C0.735735 3.54836 0.521505 3.76259 0.521505 4.02686C0.521505 4.29112 0.735735 4.50535 1 4.50535L1 3.54836ZM17.1287 4.3652C17.3155 4.17834 17.3155 3.87537 17.1287 3.68851L14.0835 0.643389C13.8967 0.456525 13.5937 0.456525 13.4069 0.643389C13.22 0.830253 13.22 1.13322 13.4069 1.32008L16.1136 4.02686L13.4069 6.73363C13.22 6.92049 13.22 7.22346 13.4069 7.41032C13.5937 7.59719 13.8967 7.59719 14.0835 7.41032L17.1287 4.3652ZM1 4.50535L16.7903 4.50535L16.7903 3.54836L1 3.54836L1 4.50535Z" fill="white" />
+//-                               </svg>
+//-                               span 18:00 начало
+//-                           .middle
+//-                               <svg width="2" height="33" viewBox="0 0 2 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                                 <path d="M1 1V31.75" stroke="white" stroke-width="0.75" stroke-linecap="round" />
+//-                               </svg>
+//-                           .right
+//-                             .right-top 
+//-                               span “Воробьёв Холл” 
+//-                             .right-bottom
+//-                               span Косыгина 28, стр.1
+//-                     .dj-block__headline ВЫСТУПЛЕНИЕ ТОР DJ
+//-                   .dj-block__bottom
+//-                     .dj-block__desc 
+//-                       p Продли эмоции с нами! 
+//-                       p Выступление TOP DJ, главных лиц столичной музыкальной электронной сцены!
+//-                       p Сотни киловатт звука, Зарядись надолго!
+//-       section.section#schedule
+//-         .container
+//-           h2.h2  Расписание
+//-           .chedule__wrap
+//-             .schedule__item
+//-               .schedule__time
+//-                 span 17:30-18:30
+//-                 <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M2 5H593" stroke="#232323" />
+//-                   <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
+//-                   <path d="M104 5L98 9.33013L98 0.669872L104 5Z" fill="#232323" />
+//-                   <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
+//-                 </svg>
+//-               .schedule__name Мужские забеги на 3000 м
+//-             .schedule__item
+//-               .schedule__time
+//-                 span 18:30-19:05
+//-                 <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M2 5H593" stroke="#232323" />
+//-                   <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
+//-                   <path d="M224 5L218 9.33013L218 0.669872L224 5Z" fill="#232323" />
+//-                   <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
+//-                 </svg>
+//-               .schedule__name Женские забеги на 3000 м
+//-             .schedule__item
+//-               .schedule__time
+//-                 span 19:10-19:29
+//-                 <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M2 5H593" stroke="#232323" />
+//-                   <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
+//-                   <path d="M269 5L263 9.33013L263 0.669872L269 5Z" fill="#232323" />
+//-                   <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
+//-                 </svg>
+//-               .schedule__name Мастер-класс по эстафетам <br> брифинг команд
+//-             .schedule__item
+//-               .schedule__time
+//-                 span 19:30-21:10
+//-                 <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M2 5H593" stroke="#232323" />
+//-                   <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
+//-                   <path d="M344 5L338 9.33013L338 0.669872L344 5Z" fill="#232323" />
+//-                   <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
+//-                 </svg>
+//-               .schedule__name Шведская эстафета <br>1600/1200/800/400
+//-             .schedule__item
+//-               .schedule__time
+//-                 span 21:20-22:10
+//-                 <svg width="598" height="10" viewBox="0 0 598 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M2 5H593" stroke="#232323" />
+//-                   <path d="M598 5L592 9.33013L592 0.669872L598 5Z" fill="#232323" />
+//-                   <path d="M464 5L458 9.33013L458 0.669872L464 5Z" fill="#232323" />
+//-                   <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
+//-                 </svg>
+//-               .schedule__name Эстафета 4х100
+//-             .schedule__item
+//-               .schedule__time
+//-                 span 22:30-23:00
+//-                 <svg width="583" height="10" viewBox="0 0 583 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                   <path d="M6 5L573 5.00005" stroke="#232323" />
+//-                   <path d="M583 5L577 9.33013L577 0.669872L583 5Z" fill="#232323" />
+//-                   <path d="M577 5L571 9.33013L571 0.669872L577 5Z" fill="#232323" />
+//-                   <path d="M8 5L2 9.33013L2 0.669872L8 5Z" fill="#232323" />
+//-                 </svg>
+//-               .schedule__name Награждение, DJ
+//-       section.section
+//-         .container
+//-           .registration-form__wrap
+//-             .registration-form__info
+//-               h2.h2  регистрация
+//-               .registration-form__title
+//-                 p.f-bold.mb-30 Регистрация бесплатная!
+//-                 p Вечерняя вечеринка с видом на Лужники, ивент с лучшим панорамным видом для всех желающих участников ММ, викторины, лотереи с ценными призами, выступление живых легенд клубной музыкальной индустрии!
+//-             form.registration-form
+//-               input(type="text" placeholder="ФИО")
+//-               input(type="number" placeholder="Возраст")
+//-               input(type="tel" placeholder="Телефон")
+//-               input(type="email" placeholder="Почта")
+//-               input(type="text" placeholder="Беговой клуб")
+//-               button.submit-btn(type="submit") Отправить
+//-       section.section
+//-         .container
+//-           h2.h2  Партнеры
+//-         .partners-slider__wrap
+//-           .swiper.partners-slider 
+//-             .swiper-wrapper
+//-               .swiper-slide(style="margin-right: 100px;")
+//-                 a(href="javascript:void(0);").partners-slider__item
+//-                   img(src="./img/dd_logo.png", alt="")
+//-               .swiper-slide(style="margin-right: 100px;")
+//-                 a(href="javascript:void(0);").partners-slider__item 
+//-                   img(src="./img/mm_logo.png", alt="")
+//-               .swiper-slide(style="margin-right: 100px;")
+//-                 a(href="javascript:void(0);").partners-slider__item 
+//-                   img(src="./img/souz_logo.png", alt="")
+//-               .swiper-slide(style="margin-right: 100px;")
+//-                 a(href="javascript:void(0);").partners-slider__item
+//-                   img(src="./img/vbi_logo.png", alt="")
 
 

@@ -352,7 +352,7 @@ a.text {
 }
 
 .header .menu-header .menu-list .menu-item .menu-link {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter-SemiBold", sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #FFFFFF;
@@ -1268,6 +1268,10 @@ a.text {
     font-size: 13px;
   }
 
+  .header .menu-header .menu-list .menu-item .menu-link {
+    font-size: 13px;
+  }
+
   .banner-main__wrap .event-banner__inner .container .headline-wrap {
     margin-bottom: 1.25rem;
   }
@@ -1292,6 +1296,10 @@ a.text {
 @media (max-width: 1100px) {
   html {
     font-size: 12px;
+  }
+
+  .header .menu-header .menu-list {
+    display: none;
   }
 }
 
@@ -1450,6 +1458,10 @@ a.text {
   .button_big {
     padding: 1.0625rem 1.875rem;
     font-size: 0.875rem;
+  }
+
+  .header .header-social {
+    display: none;
   }
 
   .banner-main__wrap .event-banner__inner .container {
