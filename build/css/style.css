@@ -219,10 +219,6 @@ html {
   font-size: 2.8125rem;
   line-height: 1.22222;
   color: #000;
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  margin-bottom: 3.4375rem;
 }
 
 .h3 {
@@ -742,7 +738,7 @@ a.text {
 }
 
 .registration-form__wrap {
-  padding: 50px;
+  padding: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
@@ -762,7 +758,7 @@ a.text {
   gap: 30px;
   font-family: "Inter-Medium", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.25;
   color: #000;
 }
@@ -854,12 +850,12 @@ a.text {
   background: #FFFFFF;
   margin-top: -1.5rem;
   border-radius: 30px;
-  padding-top: 85px;
-  padding-bottom: 150px;
+  padding-top: 5.4375rem;
+  padding-bottom: 9.375rem;
 }
 
 .event-sections .section {
-  margin-bottom: 120px;
+  margin-bottom: 7.5rem;
 }
 
 .event-sections .event-location__wrap {
@@ -1407,7 +1403,7 @@ a.text {
   }
 
   .h2 {
-    font-size: 1.5rem;
+    font-size: 2.1875rem;
   }
 
   .large-text {
@@ -1452,11 +1448,20 @@ a.text {
   .date-block__wrap .right {
     margin-left: 16px;
   }
+
+  .registration-form__wrap {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
   }
 
   .button_big {
@@ -1498,11 +1503,60 @@ a.text {
   .date-block__wrap .left .left-bottom {
     gap: 6px;
   }
+
+  .registration-form__wrap {
+    gap: 35px;
+  }
+
+  .registration-form__wrap .registration-form__info {
+    font-size: 0.75rem;
+    gap: 0px;
+  }
+
+  .registration-form__wrap .registration-form__info .h2 {
+    margin-bottom: 25px;
+  }
+
+  .registration-form__wrap .registration-form__info .registration-form__title {
+    margin-bottom: 30px;
+  }
+
+  .registration-form__wrap .registration-form {
+    gap: 20px;
+  }
+
+  .registration-form__wrap .registration-form input {
+    font-size: 16px;
+    padding: 20px 5px 20px 20px;
+  }
+
+  .registration-form__wrap .registration-form .submit-btn {
+    font-size: 14px;
+    padding: 21px 75px;
+    margin: 10px auto 0 auto;
+  }
+
+  .event-sections {
+    padding-top: 1.5625rem;
+    padding-bottom: 6.25rem;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .banner-main__wrap {
+    min-height: 690px;
+  }
+}
+
+@media (max-width: 340px) {
+  .registration-form__wrap .registration-form input {
+    width: 100%;
   }
 }
 

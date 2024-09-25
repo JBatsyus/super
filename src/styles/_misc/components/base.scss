@@ -39,11 +39,10 @@ font-weight: 900;
 font-size: rem(45px);
 line-height: 1.22222;
 color: #000;
-text-transform: uppercase;
-  font-size: rem(40px);
-  line-height: rem(40px);
-  margin-bottom: rem(55px);
-  @include tablet_991 {
+@include tablet_991 {
+    font-size: rem(35px);
+  }
+  @include mobile_768  {
     font-size: rem(24px);
   }
 }
