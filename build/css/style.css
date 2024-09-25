@@ -946,7 +946,11 @@ a.text {
   grid-row: 2/3;
 }
 
-.event-sections .chedule__wrap {
+.event-sections .shedule-h2 {
+  margin-bottom: 3.75rem;
+}
+
+.event-sections .shedule__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -960,7 +964,7 @@ a.text {
   padding: 4rem 2.75rem;
 }
 
-.event-sections .chedule__wrap .schedule__item {
+.event-sections .shedule__wrap .schedule__item {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   -webkit-box-align: start;
@@ -969,7 +973,7 @@ a.text {
   white-space: nowrap;
 }
 
-.event-sections .chedule__wrap .schedule__item .schedule__time {
+.event-sections .shedule__wrap .schedule__item .schedule__time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -983,7 +987,7 @@ a.text {
   gap: 13px;
 }
 
-.event-sections .chedule__wrap .schedule__item .schedule__time span {
+.event-sections .shedule__wrap .schedule__item .schedule__time span {
   font-family: "Inter-SemiBold", sans-serif;
   font-weight: 600;
   font-size: 2rem;
@@ -991,11 +995,12 @@ a.text {
   color: #232323;
 }
 
-.event-sections .chedule__wrap .schedule__item .schedule__time svg {
-  width: 37.375rem;
+.event-sections .shedule__wrap .schedule__item .schedule__time svg {
+  max-width: 37.375rem;
+  width: 100%;
 }
 
-.event-sections .chedule__wrap .schedule__item .schedule__name {
+.event-sections .shedule__wrap .schedule__item .schedule__name {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 2rem;
@@ -1004,11 +1009,11 @@ a.text {
   padding-left: 23px;
 }
 
-.event-sections .chedule__wrap .schedule__item:nth-of-type(3) .schedule__name {
+.event-sections .shedule__wrap .schedule__item:nth-of-type(3) .schedule__name {
   line-height: 1.5625;
 }
 
-.event-sections .chedule__wrap .schedule__item:nth-of-type(4) .schedule__name {
+.event-sections .shedule__wrap .schedule__item:nth-of-type(4) .schedule__name {
   line-height: 1.5625;
 }
 
@@ -1474,6 +1479,20 @@ a.text {
   .event-sections .event-location__wrap {
     grid-template-columns: 1fr;
   }
+
+  .event-sections .shedule__wrap .schedule__item {
+    grid-template-columns: 1fr;
+  }
+
+  .event-sections .shedule__wrap .schedule__item .schedule__time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1616,11 +1635,41 @@ a.text {
     grid-column: 1/2;
     grid-row: 3/4;
   }
+
+  .event-sections .shedule-h2 {
+    margin-bottom: 2.1875rem;
+  }
+
+  .event-sections .shedule__wrap {
+    margin-bottom: 2.1875rem;
+    padding: 1.6875rem 8px 2.6875rem 1.6875rem;
+    gap: 1.875rem;
+  }
+
+  .event-sections .shedule__wrap .schedule__item .schedule__time {
+    padding-left: 0;
+  }
+
+  .event-sections .shedule__wrap .schedule__item .schedule__time span {
+    font-size: 1.5625rem;
+  }
+
+  .event-sections .shedule__wrap .schedule__item .schedule__name {
+    font-size: 1.125rem;
+    padding-left: 0px;
+    /* line-height: 30px; */
+    line-height: 1.66667;
+    color: #232323;
+  }
 }
 
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
+  }
+
+  .event-sections .shedule__wrap .schedule__item .schedule__time svg {
+    max-width: 320px;
   }
 }
 
@@ -1637,6 +1686,10 @@ a.text {
 
   .event-sections .event-location__wrap .event-location__info .event-location__title {
     max-width: 260px;
+  }
+
+  .event-sections .shedule__wrap .schedule__item .schedule__time svg {
+    max-width: 220px;
   }
 }
 
