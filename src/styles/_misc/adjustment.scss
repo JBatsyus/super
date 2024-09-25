@@ -65,7 +65,9 @@ body {
   flex-direction: column;
   height: 100vh;
 }
-
+body.no-scroll {
+  overflow: hidden;
+}
 
 
 :root {

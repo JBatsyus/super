@@ -1,4 +1,7 @@
 /*--------------header start-------------*/
+.header-wrapper .bgk-hr {
+  background-color: #1f1f1f;
+}
 .header-wrapper {
   position: fixed;
   top: 0;
@@ -6,6 +9,7 @@
   right: 0;
   z-index: 50;
   background-color: $color-gray;
+  transition: background-color 0.4s ease-in-out;
   ul,
   li {
     padding: 0;
@@ -13,21 +17,30 @@
     list-style: none;
   }
 }
+.header-wrapper.bgk-hr {
+  background-color: #1f1f1f;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  @include mobile_768 {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    .header-logo__wrap img {
+      width: 128px;
+    }
+  }
+
   .menu-header {
     .menu-list {
       display: flex;
       gap: 10px;
-      @include desktop1100{
+      @include desktop1100 {
         display: none;
       }
-    
-      
       .menu-item {
         padding: 10px 20px;
         transition: 0.4s ease-in-out;
@@ -42,7 +55,7 @@
           font-size: 16px;
           color: $color-white;
           text-transform: uppercase;
-          @include desktop1200{
+          @include desktop1200 {
             font-size: 13px;
           }
         }
@@ -52,7 +65,7 @@
   .header-social {
     display: flex;
     gap: 20px;
-    @include mobile_768{
+    @include tablet_991 {
       display: none;
     }
     a {
@@ -65,4 +78,139 @@
     }
   }
 }
+
+/*--------------мобильное меню start-------------*/
+.menu-humb {
+  display: none;
+
+  @include tablet_991 {
+    display: block;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+
+    .icon-humb {
+      width: 30px;
+      height: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .icon-humb__line {
+        background: $color-white;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        -webkit-transition: -webkit-transform 0.2s ease-in-out;
+        transition: -webkit-transform 0.2s ease-in-out;
+        -o-transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+
+        &:first-child {
+          transform-origin: 25% 0%;
+          transition: -webkit-transform 0.4s ease-in-out;
+          -o-transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+        }
+
+        &:last-child {
+          transform-origin: 0% 0%;
+          transition: -webkit-transform 0.4s ease-in-out;
+          -o-transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+        }
+      }
+    }
+
+    &.active .icon-humb__line {
+      transform: scale(0);
+    }
+
+    &.active .icon-humb__line:first-child {
+      transform: rotate(45deg);
+      width: 30px;
+    }
+
+    &.active .icon-humb__line:last-child {
+      transform: rotate(-45deg);
+      width: 30px;
+    }
+  }
+}
+.menu-mob{
+  display: none;
+}
+@include tablet_991 {
+  .menu-mob.active {
+    z-index: 80;
+    right: 0;
+  }
+
+  .menu-mob {
+    display: block;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 74px;
+    right: -1000px;
+    overflow-y: auto;
+    width: 100%;
+    transition: 0.4s;
+    height: 100vh;
+    padding: 24px;
+  }
+
+  .menu-mob.active {
+    z-index: 80;
+    right: 0;
+  }
+
+  .menu-mob__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+    .menu-mob-header {
+      display: flex;
+      flex-direction: column;
+      .menu-mob-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .menu-mob-item {
+          .menu-mob-link {
+            font-family: $Inter600;
+            font-weight: 600;
+            font-size: 20px;
+            color: $color-white;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .menu-mob-soc {
+      display: flex;
+      gap: 30px;
+      
+    a {
+        svg {
+          width: 50px;
+          height: 50px;
+          transition: fill 0.4s ease-in-out;
+        }
+        &:hover svg path {
+          fill: rgba(255, 255, 255, 0.25);
+        }
+      }
+    }
+  }
+}
+/*--------------мобильное меню end-------------*/
 /*--------------header end-------------*/

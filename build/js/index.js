@@ -65,6 +65,35 @@ $('a[href^="#"]').on('click', function(e) {
     return false;
 });
 
+ // мобильное меню
+ $('.menu-humb').on('click', function () {
+  $(this).toggleClass('active');
+  $('.menu-mob').toggleClass('active');
+  $('.header-bottom .container').toggleClass('menu_active');
+  $('.header-wrapper').toggleClass('bgk-hr');
+  $('body').toggleClass('no-scroll');
+});
+
+
+
+// $('a.scroll-to').on('click', function(e){
+//   e.preventDefault();
+//   var anchor = $(this).attr('href');
+  
+//   if ($('.hamburger').hasClass('is-open')) {
+//       $('body').removeClass('no-scroll');
+//       $('.hamburger, .mobile-menu').removeClass('is-open');
+//       $('.mobile-menu').addClass('is-closed');
+//       setTimeout(() => {
+//           $('.mobile-menu').removeClass('is-closed');
+//       }, 700);
+//   }
+
+//   $('html, body').stop().animate({
+//       scrollTop: $(anchor).offset().top - 50
+//   }, 800);
+// });
+
 
 });
 
