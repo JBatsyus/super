@@ -7,12 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <title>Марафон и гантели</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
     <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/plugins/slick.css">
-    <link rel="stylesheet" href="css/plugins/slick-theme.css">
-    <link rel="stylesheet" href="css/plugins/lightgallery.min.css">
-    <link rel="stylesheet" href="css/plugins/jquery.formstyler.css">
     <link rel="stylesheet" href="css/plugins/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -73,7 +68,7 @@
               <p>Приглашаем участников Московского Марафона на afterparty by dd</p>
             </div>
             <div class="post-wrap"> 
-              <div class="buttons-wrap"><a class="button button_big button_orange" href="javascript:void(0);">Бесплатная регистрация</a>
+              <div class="buttons-wrap"><a class="button button_big button_orange modal-toggle" href="javascript:void(0);">Бесплатная регистрация</a>
               </div>
               <div class="partners-wrap"> <img src="./img/dd.svg" alt=""><img src="./img/souz.svg" alt=""><img src="./img/Moscow_Marathon.svg" alt=""></div>
             </div>
@@ -83,13 +78,13 @@
       <div class="event-sections">
         <section class="section" id="registration">
           <div class="container">
-            <div class="event-registration__wrap">
-              <div class="event-registration__info">
+            <div class="registration-form__wrap">
+              <div class="registration-form__info">
                 <h2 class="h2"> регистрация</h2>
-                <div class="event-registration__title"><span class="f-bold">Мы популяризируем бег и объединяем клубы. <br></span>Мы развиваем спортивный нетворкинг.<br>
+                <div class="registration-form__title"><span class="f-bold">Мы популяризируем бег и объединяем клубы. <br></span>Мы развиваем спортивный нетворкинг.<br>
                   Лучшие соревнуются с лучшими.<br><span class="f-bold">Но на Afterparty by DD вы отдохнёте.</span>
                 </div>
-                <div class="event-registration__list">
+                <div class="registration-form__list">
                   <ul>
                     <li>Вход свободный</li>
                     <li>Видовой проезд на канатной дороге до Afterparty</li>
@@ -257,10 +252,10 @@
         </section>
         <section class="section">
           <div class="container">
-            <div class="event-registration__wrap">
-              <div class="event-registration__info">
+            <div class="registration-form__wrap">
+              <div class="registration-form__info">
                 <h2 class="h2"> регистрация</h2>
-                <div class="event-registration__title">
+                <div class="registration-form__title">
                   <p class="f-bold mb-30">Регистрация бесплатная!</p>
                   <p>Вечерняя вечеринка с видом на Лужники, ивент с лучшим панорамным видом для всех желающих участников ММ, викторины, лотереи с ценными призами, выступление живых легенд клубной музыкальной индустрии!</p>
                 </div>
@@ -320,12 +315,37 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal-overlay modal-toggle"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="registration-form__wrap">
+          <div class="registration-form__info">
+            <h2 class="h2"> регистрация</h2>
+            <div class="registration-form__title"><span class="f-bold">Мы популяризируем бег и объединяем клубы. <br></span>Мы развиваем спортивный нетворкинг.<br>
+              Лучшие соревнуются с лучшими.<br><span class="f-bold">Но на Afterparty by DD вы отдохнёте.</span>
+            </div>
+            <div class="registration-form__list">
+              <ul>
+                <li>Вход свободный</li>
+                <li>Видовой проезд на канатной дороге до Afterparty</li>
+                <li>Розыгрыши и интерактивы от партнеров вечеринки</li>
+                <li>Зоны BAR&FOOD</li>
+              </ul>
+            </div>
+          </div>
+          <form class="registration-form">
+            <input type="text" placeholder="ФИО">
+            <input type="number" placeholder="Возраст">
+            <input type="tel" placeholder="Телефон">
+            <input type="email" placeholder="Почта">
+            <input type="text" placeholder="Беговой клуб">
+            <button class="submit-btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/plugins/jquery-3.4.1.min.js"></script>
-    <script src="js/plugins/bootstrap.min.js"></script>
     <script src="js/plugins/swiper-bundle.min.js"></script>
-    <script src="js/plugins/jquery.maskedinput.js"></script>
-    <script src="js/plugins/dropzone.min.js"></script>
-    <script src="js/plugins/jquery.formstyler.min.js"></script>
     <script src="js/plugins/jquery.magnific-popup.min.js"></script>
     <script src="./js/index.js"></script>
   </body>

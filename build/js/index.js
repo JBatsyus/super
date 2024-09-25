@@ -22,6 +22,16 @@ $(document).ready(function () {
     }
   });
 
+ // модалка 
+
+
+ $('.modal-toggle').on('click', function (e) {
+  e.preventDefault();
+  $('body').toggleClass('modal-open');
+  $('.modal').toggleClass('is-visible');
+});
+
+
 // якоря
   $("a[href*='#']").on("click", function(e) {
     e.preventDefault();
