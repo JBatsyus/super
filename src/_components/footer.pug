@@ -3,9 +3,16 @@ footer.footer-wrap
     .footer
       .footer-top
         ul.footer-list
-         each val in ['Регистрация','Конкурсы','Место проведения','Выступление','Расписание']
             li.footer-list__item
-              a(href="javascript:void(0);").footer-list__link !{val}
+              a(href="#registration").footer-list__link Регистрация
+            li.footer-list__item
+              a(href="#competitions").footer-list__link Конкурсы
+            li.footer-list__item
+              a(href="#venue").footer-list__link Место проведения
+            li.footer-list__item
+              a(href="#performance").footer-list__link Выступление
+            li.footer-list__item
+              a(href="#schedule").footer-list__link Расписание
         .footer-social
           a(href="javascript:void(0);").social-icon
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

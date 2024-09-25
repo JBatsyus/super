@@ -5,9 +5,16 @@ header.header-wrapper
         img.header-logo(src='./img/logo.svg' alt='Московский Марафон')
       nav.menu-header
           ul.menu-list
-            each val in ['Регистрация','Конкурсы','Место проведения','Выступление','Расписание']
-              li.menu-item
-                a(href="javascript:void(0);").menu-link !{val}
+            li.menu-item
+              a(href="#registration").menu-link Регистрация
+            li.menu-item
+              a(href="#competitions").menu-link Конкурсы
+            li.menu-item
+              a(href="#venue").menu-link Место проведения
+            li.menu-item
+              a(href="#performance").menu-link Выступление
+            li.menu-item
+              a(href="#schedule").menu-link Расписание
       .header-social
         a(href="javascript:void(0);")
           <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">

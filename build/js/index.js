@@ -21,21 +21,41 @@ $(document).ready(function () {
       },
     }
   });
-  
-  
 
-  // mob menu
-  $('.humb').on('click', function () {
-    $('.body').toggleClass('open-menu');
-  });
+// якоря
+  $("a[href*='#']").on("click", function(e) {
+    e.preventDefault();
+    var anchor = $(this);
+    var target = $(anchor.attr('href'));
+    
+    if (target.length) {
+        var offsetTop = target.offset().top - 100;
+        
+        // Анимация скролла
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 777);
+    }
+    return false;
+});
+
+$('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    var link = $(this).attr('href');
+    var el = $(document).find(link);
+    
+    if (el.length) {
+        var offsetTop = el.eq(0).offset().top - 100;
+        
+        // Анимация скролла
+        $('html, body').animate({
+            scrollTop: offsetTop
+        }, 1000, 'linear');
+    }
+    return false;
+});
 
 
-  
-  /// mask
-  $(function () {
-    $(".input-phone").mask("+7 (999) 999 99 99");
-  });
-  ///
 });
 
 
