@@ -285,6 +285,7 @@
       border: none;
       cursor: pointer;
       margin-top: 25px;
+      transition: 0.4s ease-in-out;
       @include mobile_768 {
         font-size: 14px;
         padding: 21px 75px;
@@ -315,6 +316,9 @@
 
   .section {
     margin-bottom: rem(120px);
+    @include mobile_768 {
+     margin-bottom: rem(80px);
+    }
   }
 
   .event-location__wrap {
@@ -579,6 +583,12 @@
     position: relative;
     overflow: hidden;
     border-radius: 40px;
+    @include tablet_991 {
+      min-height: rem(876px);
+    }
+    @include mobile_768 {
+      min-height: rem(635px);
+    }
     .dj-image {
       position: absolute;
       z-index: 1;
@@ -597,13 +607,23 @@
         padding: 50px 56px 80px 76px;
         position: relative;
         z-index: 2;
+        @include tablet_991 {
+          grid-template-columns: 1fr;
+          padding: 33px 16px;
+        }
 
         .dj-block__left {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
+          @include tablet_991 {
+            justify-content: normal;
+          }
           .dj-block__top {
             .dj-block__title {
+              .date-block__wrap{
+                font-size: 10px;
+              }
             }
             .dj-block__headline {
               font-family: $Inter900;
@@ -615,6 +635,12 @@
               color: #fff;
               max-width: 710px;
               width: 100%;
+              @include desktop1400 {
+                font-size: rem(70px);
+              }
+              @include mobile_768 {
+                font-size: rem(30px);
+              }
             }
           }
           .dj-block__bottom {
@@ -635,18 +661,36 @@
                 font-size: rem(36px);
                 line-height: 0.83333;
                 margin-bottom: 50px;
+                @include desktop1400 {
+                  font-size: rem(28px);
+                }
+                @include tablet_991 {
+                  margin-bottom: 30px;
+                  font-size: 16px;
+                  line-height: 1.04816;
+                  text-transform: uppercase;
+                }
+                @include mobile_768 {
+                  margin-bottom: 15px;
+                }
               }
               p:nth-of-type(2) {
                 font-family: $Inter500;
                 font-weight: 500;
                 font-size: rem(24px);
                 line-height: 1.25;
+                @include tablet_991 {
+                  font-size: rem(16px);
+                }
               }
               p:nth-of-type(3) {
                 font-family: $Inter900;
                 font-weight: 900;
                 font-size: rem(24px);
                 line-height: 1.25;
+                @include tablet_991 {
+                  font-size: rem(16px);
+                }
               }
             }
           }
@@ -662,6 +706,18 @@
             img {
               height: 21px;
             }
+            @include tablet_991 {
+              top: auto;
+              right: auto;
+              bottom: 0;
+              left: 0;
+            }
+            img {
+              height: 21px;
+              @include mobile_768 {
+                height: 11px;
+              }
+            }
           }
 
           .image-starr {
@@ -670,10 +726,22 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            transition: transform 0.5s ease; // Добавляем переход для анимации
+            transition: transform 0.5s ease;
+            @include tablet_991 {
+              top: 0;
+            }
+            @include mobile_768 {
+              top: 5%;
+            }
 
             img {
               max-width: rem(596px);
+              @include tablet_991 {
+                max-width: rem(450px);
+              }
+              @include mobile_768 {
+                max-width: rem(255px);
+              }
             }
           }
 
@@ -683,9 +751,21 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(1);
-            transition: transform 0.5s ease; // Добавляем переход для анимации
+            transition: transform 0.5s ease;
+            @include tablet_991 {
+              top: 0;
+            }
+            @include mobile_768 {
+              top: 5%;
+            }
             img {
               max-width: rem(327px);
+              @include tablet_991 {
+                max-width: rem(250px);
+              }
+              @include mobile_768 {
+                max-width: rem(130px);
+              }
             }
           }
         }
