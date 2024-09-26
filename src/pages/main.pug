@@ -73,17 +73,28 @@ block content
               input(type="email" placeholder="Почта")
               input(type="text" placeholder="Беговой клуб")
               button.submit-btn(type="submit") Отправить
-      //- section.section#competitions
-      //-   .container
-      //-     .relay-block__wrap
-      //-       .relay-image(style="background-image:url('./img/relay.png')")
-      //-         .relay-block__inner-wrap
-      //-           .relay-block__left 
-      //-               .relay-block__title 
-      //-                 p Продолжи 
-      //-                 p свою эстафету
-      //-               .relay-shape 
-      //-                 span На afterparty by dd
+      section.section#competitions
+        .container
+          .relay-block__wrap
+            .relay-block__texture
+              img(src="./img/texture.png", alt="")
+            .relay-image(style="background-image:url('./img/relay.png')")
+              .relay-block__inner-wrap
+                .relay-block__left 
+                  .relay-block__title 
+                    p Продолжи 
+                    p свою эстафету
+                  .relay-shape 
+                    img(src="./img/shape_white.svg" alt="").desk
+                    img(src="./img/shape_white-mob.svg" alt="").mob
+                .relay-block__right
+                  .image-logo
+                    img(src="./img/vbi.svg" alt="")
+                  .image-star
+                    img(src="./img/star.png" alt="").wow
+                  .up-image
+                    img(src="./img/iPhone.png" alt="").wow
+              
       section.section#venue
               .container
                 .event-location__wrap

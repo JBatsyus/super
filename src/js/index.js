@@ -105,4 +105,63 @@ $(document).ready(function() {
         700
       );
   });
+
+
+
+
+// Логика для отслеживания направления прокрутки
+let lastScrollTop = 0;
+let imageStar = document.querySelector('.image-star img');
+let upImage = document.querySelector('.up-image img'); // Вторая картинка
+let imageWrapper = document.querySelector('.relay-block__texture'); // Обертка для картинок
+let isRotatedRight = false;  // Флаг для отслеживания состояния вращения image-star
+
+// Обработчик скролла
+function handleScroll() {
+  let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScrollTop > lastScrollTop && !isRotatedRight) {
+    // Скроллим вниз
+    imageStar.classList.add('rotate-right');
+    imageStar.classList.remove('rotate-left');
+    upImage.classList.add('rotate-up-right'); // Вращение up-image на -25 градусов
+    upImage.classList.remove('rotate-up-left');
+    isRotatedRight = true;
+  } else if (currentScrollTop < lastScrollTop && isRotatedRight) {
+    // Скроллим вверх
+    imageStar.classList.add('rotate-left');
+    imageStar.classList.remove('rotate-right');
+    upImage.classList.add('rotate-up-left'); // Возврат up-image в исходное положение
+    upImage.classList.remove('rotate-up-right');
+    isRotatedRight = false;
+  }
+
+  lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Запоминаем последнее значение скролла
+}
+
+// Сразу инициализируем обработчик скролла
+window.addEventListener('scroll', handleScroll);
+
+// Объединение логики hover для обертки картинок
+imageWrapper.addEventListener('mouseover', function() {
+  imageStar.classList.add('rotate-right'); // Вращение вправо при наведении
+  upImage.classList.add('rotate-up-right'); // Вращение на -25 градусов при наведении
+
+  // Убираем классы сразу же для возможности повторного срабатывания
+  setTimeout(() => {
+    imageStar.classList.remove('rotate-right');
+    upImage.classList.remove('rotate-up-right');
+  }, 0); // Сразу же убираем классы
+});
+
+imageWrapper.addEventListener('mouseout', function() {
+  if (isRotatedRight) {
+    imageStar.classList.add('rotate-right');
+    upImage.classList.add('rotate-up-right');
+  } else {
+    imageStar.classList.add('rotate-left');
+    upImage.classList.add('rotate-up-left');
+  }
+});
+
 });
