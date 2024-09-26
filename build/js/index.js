@@ -4,10 +4,12 @@ document.documentElement.style.setProperty('--js-header-height', headerHeight + 
 //console.log("Высота хедера " + headerHeight + " пикселей");
 
 $(document).ready(function() {
-  let partnersSlider = new Swiper('.partners-slider', {
+var partnersSlider = new Swiper('.partners-slider', {
     slidesPerView: 'auto',
     slidesPerGroup: 1,
     loop: true,
+    loopedSlides: 10,
+    loopAdditionalSlides: 10, 
     spaceBetween: 60,
     speed: 3000,
     autoplay: {
@@ -21,6 +23,10 @@ $(document).ready(function() {
       },
     },
   });
+
+
+
+
 
   // модалка
 
