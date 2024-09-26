@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* Миксин замены цвета placeholder у input.
+Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
+
 @font-face {
   font-family: "Humanst521 BT";
   src: url("../fonts/Humanist521BT-Roman.woff2") format("woff2"), url("../fonts/Humanist521BT-Roman.woff") format("woff"), url("../fonts/Humanist521BT-Roman.ttf") format("truetype");
