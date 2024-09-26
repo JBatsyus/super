@@ -578,6 +578,7 @@
     min-height: 676px;
     position: relative;
     overflow: hidden;
+    border-radius: 40px;
     .dj-image {
       position: absolute;
       z-index: 1;
@@ -647,6 +648,44 @@
                 font-size: rem(24px);
                 line-height: 1.25;
               }
+            }
+          }
+        }
+        .dj-block__right {
+          z-index: 0;
+          position: relative;
+
+          .image-logo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            img {
+              height: 21px;
+            }
+          }
+
+          .image-starr {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.5s ease; // Добавляем переход для анимации
+
+            img {
+              max-width: rem(596px);
+            }
+          }
+
+          .up-img {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.5s ease; // Добавляем переход для анимации
+            img {
+              max-width: rem(327px);
             }
           }
         }
@@ -877,11 +916,10 @@
         .rotate-up-right {
           transform: rotate(-15deg) scale(1.2); /* Вращение на -20 градусов и увеличение */
         }
-        
+
         .rotate-up-left {
           transform: rotate(0deg) scale(1); /* Возврат в исходное положение и уменьшение */
         }
-        
 
         /* Анимация при наведении */
         .image-star img:hover {

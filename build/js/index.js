@@ -165,3 +165,41 @@ imageWrapper.addEventListener('mouseout', function() {
 });
 
 });
+
+const blockRight = document.querySelector('.dj-block__right');
+const imgStar = document.querySelector('.image-starr');
+const imgUp = document.querySelector('.up-img');
+const wrap = document.querySelector('.dj-block__wrap');
+
+window.addEventListener('scroll', () => {
+  const wrapRect = wrap.getBoundingClientRect();
+
+  // Проверяем, виден ли wrap на 20%
+  if (wrapRect.top <= window.innerHeight * 0.2 && wrapRect.bottom >= window.innerHeight * 0.2) {
+    const scrollPercentage = (wrapRect.top + wrapRect.height) / window.innerHeight; // Расчет процента скролла
+    const rotation = 180 * (1 - scrollPercentage); // Угол вращения
+    
+    
+    const scale = 1 + (0.2 * (1 - scrollPercentage));
+
+    imgStar.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+    imgUp.style.transform = `translate(-50%, -50%) scale(${scale})`;
+  } else {
+    resetTransformations();
+  }
+});
+
+blockRight.addEventListener('mouseenter', () => {
+  imgStar.style.transform = `translate(-50%, -50%) rotate(180deg)`;
+  
+  // Ограничиваем scale при наведении до 1.1
+  imgUp.style.transform = `translate(-50%, -50%) scale(1.1)`;
+});
+
+blockRight.addEventListener('mouseleave', resetTransformations);
+
+function resetTransformations() {
+  imgStar.style.transform = `translate(-50%, -50%) rotate(0deg)`;
+  imgUp.style.transform = `translate(-50%, -50%) scale(1)`;
+}
+
