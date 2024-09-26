@@ -5,11 +5,12 @@ document.documentElement.style.setProperty('--js-header-height', headerHeight + 
 
 $(document).ready(function() {
 var partnersSlider = new Swiper('.partners-slider', {
-    slidesPerView: 'auto',
+    slidesPerView: 4,
     slidesPerGroup: 1,
     loop: true,
-    loopedSlides: 10,
-    loopAdditionalSlides: 10, 
+    waitForTransition: true,
+    // loopedSlides: 10,
+    // loopAdditionalSlides: 10, 
     spaceBetween: 60,
     speed: 3000,
     autoplay: {
