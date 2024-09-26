@@ -79,22 +79,13 @@ p {
   margin-bottom: 0;
 }
 
-.text-small {
-  font-size: rem(14px);
-}
 
-a.text:active, /* активная/посещенная ссылка */
-a.text:hover,  /* при наведении */
-a.text {
-  text-decoration: none;
-  color: $color-white;
-}
 
-@import "elements/selects";
-@import "elements/checkboxes";
-@import "elements/up-button";
+
+
+
 @import "elements/buttons";
-@import "elements/inputs";
+
 
 
 

@@ -1,24 +1,4 @@
-/* Миксин замены цвета placeholder у input.
-Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
-@mixin placeholder($color, $font) {
-  
-  &::-webkit-input-placeholder {
-    color: $color;
-    font-size: $font;
-  }
-  
-  &::-moz-placeholder {
-    color: $color;
-    font-size: $font;
-    
-  }
-  
-  &:-ms-input-placeholder {
-    color: $color;
-    font-size: $font;
-    
-  }
-}
+
 
 
 @mixin background($url) {
@@ -56,98 +36,9 @@
 }
 
 
-@mixin last-mb-0 {
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@mixin last-mr-0 {
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-@mixin ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@mixin width-flex($width) {
-  width: $width;
-  min-width: $width;
-}
 
 
-@mixin scroll-style {
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar-button {
-    background-image: url('');
-    background-repeat: no-repeat;
-    width: 4px;
-    height: 0;
-  }
-  
-  &::-webkit-scrollbar-track {
-    background-color: #E7EBF1;
-    border-radius: 4px;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: $R-400;
-    cursor: pointer;
-  }
-  &::-webkit-resizer {
-    background-image: url('');
-    background-repeat: no-repeat;
-    width:4px;
-    height: 0;
-  }
-  &::-webkit-scrollbar {
-    width: 4px;
-    left: -100px;
-  }
-  
-}
 
-@mixin scroll-style-thin {
-  scrollbar-width: thin;
-  scrollbar-color: $gray transparent;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar-button {
-    background-image: none;
-    background-repeat: no-repeat;
-    width: 4px;
-    height: 0;
-  }
-  
-  &::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 10px;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: $gray;
-    
-    border: 5px solid #fff;
-    cursor: pointer;
-  }
-  
-  &::-webkit-resizer {
-    background-image: none;
-    background-repeat: no-repeat;
-    width: 4px;
-    height: 0;
-  }
-  
-  &::-webkit-scrollbar {
-    width: 12px;
-    left: -100px;
-  }
-  
-}
 
 //@mixin tablet_small {
 //    @media (max-width: 768px) {
