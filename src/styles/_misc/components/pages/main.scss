@@ -875,12 +875,13 @@
         }
 
         .rotate-up-right {
-          transform: rotate(-15deg); // Вращение на -25 градусов для up-image
+          transform: rotate(-15deg) scale(1.2); /* Вращение на -20 градусов и увеличение */
         }
-
+        
         .rotate-up-left {
-          transform: rotate(0deg); // Возврат в исходное положение для up-image
+          transform: rotate(0deg) scale(1); /* Возврат в исходное положение и уменьшение */
         }
+        
 
         /* Анимация при наведении */
         .image-star img:hover {

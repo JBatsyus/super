@@ -1347,15 +1347,17 @@ a.text {
 }
 
 .event-sections .relay-block__wrap .relay-image .relay-block__inner-wrap .rotate-up-right {
-  -webkit-transform: rotate(-15deg);
-      -ms-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg) scale(1.2);
+      -ms-transform: rotate(-15deg) scale(1.2);
+          transform: rotate(-15deg) scale(1.2);
+  /* Вращение на -20 градусов и увеличение */
 }
 
 .event-sections .relay-block__wrap .relay-image .relay-block__inner-wrap .rotate-up-left {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(0deg) scale(1);
+      -ms-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  /* Возврат в исходное положение и уменьшение */
 }
 
 .event-sections .relay-block__wrap .relay-image .relay-block__inner-wrap .image-star img:hover {
